@@ -13,7 +13,7 @@ function myCurry(arr) {
 
   sumP = arr[0];
   p.push(0);
-  for (let j = i + 1; j < arr.length; j++) {
+  for (let j = 1; j < arr.length; j++) {
     for (let k = j; k < arr.length; k++) {
       let num = arr[k];
       if (sumP + num <= target) {
@@ -28,7 +28,7 @@ function myCurry(arr) {
     p.splice(0);
   }
 
-  for (let j = i + 1; j < arr.length; j++) {
+  for (let j = 1; j < arr.length; j++) {
     for (let k = j; k < arr.length; k++) {
       let num = arr[k];
       if (sumQ + num <= target) {
@@ -43,7 +43,7 @@ function myCurry(arr) {
     q.splice(0);
   }
 
-  for (let j = i + 1; j < arr.length; j++) {
+  for (let j = 1; j < arr.length; j++) {
     for (let k = j; k < arr.length; k++) {
       let num = arr[k];
       if (sumR + num <= target) {
@@ -76,3 +76,5 @@ function formString(p, q, r, arr) {
 }
 
 const arr = [3, 7, 2, 5, 4];
+
+myCurry(arr);
